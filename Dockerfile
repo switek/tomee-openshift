@@ -12,9 +12,7 @@ RUN set -x \
 	&& rm -Rf apache-tomee-plus-7.0.5 \
 	&& rm bin/*.bat \
 	&& rm tomee.tar.gz* \	
-	&& mv /usr/local/tomee/tomcat-users.xml /usr/local/tomee/tomcat-users.xml.old \
-	&& curl -fSL https://github.com/switek/tomee-openshift/blob/master/xml/tomcat-users.xml -o /usr/local/tomee/tomcat-users.xml
-
+	
 
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
