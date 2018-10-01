@@ -12,7 +12,7 @@ RUN set -x \
         && tar -zxf tomee.tar.gz \
 	&& mv apache-tomee-plus-7.0.5/* /usr/local/tomee \
 	&& mv /usr/local/tomee/conf/tomcat-users.xml /usr/local/tomee/conf/tomcat-users.xml.old \
-	&& curl -fSL https://github.com/switek/tomee-openshift/blob/master/xml/tomcat-users.xml -o /usr/local/tomee/conf/tomcat-users.xml \
+	&& curl -fSL https://raw.githubusercontent.com/switek/tomee-openshift/master/xml/tomcat-users.xml -o /usr/local/tomee/conf/tomcat-users.xml \
 	&& rm -rf apache-tomee-plus-7.0.5 \
 	&& rm bin/*.bat \
 	&& rm tomee.tar.gz*
