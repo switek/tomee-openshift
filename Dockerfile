@@ -7,6 +7,8 @@ RUN mkdir -p /usr/local/tomee
 WORKDIR /usr/local/tomee
 
 RUN set -x \
+	&& apk add --update curl && \
+	&& rm -rf /var/cache/apk/* \
 	&& curl -fSL https://repo.maven.apache.org/maven2/org/apache/tomee/apache-tomee/7.0.5/apache-tomee-7.0.5-plus.tar.gz -o tomee.tar.gz \
         && tar -zxf tomee.tar.gz \
 	&& mv apache-tomee-plus-7.0.5/* /usr/local/tomee \
