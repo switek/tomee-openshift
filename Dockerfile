@@ -1,4 +1,5 @@
-FROM openjdk:8-jre
+FROM openjdk:8-jre-alpine
+#FROM openjdk:8-jre
 
 ENV PATH /usr/local/tomee/bin:$PATH
 RUN mkdir -p /usr/local/tomee
