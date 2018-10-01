@@ -11,7 +11,7 @@ RUN set -x \
 	&& curl -fSL https://repo.maven.apache.org/maven2/org/apache/tomee/apache-tomee/7.0.5/apache-tomee-7.0.5-plus.tar.gz -o tomee.tar.gz \
         && tar -zxf tomee.tar.gz \
 	&& mv apache-tomee-plus-7.0.5/* /usr/local/tomee \
-	&& mv /usr/local/tomee/tomcat-users.xml /usr/local/tomee/tomcat-users.xml.old \
+	&& mv /usr/local/tomee/conf/tomcat-users.xml /usr/local/tomee/conf/tomcat-users.xml.old \
 	&& curl -fSL https://github.com/switek/tomee-openshift/blob/master/xml/tomcat-users.xml -o /usr/local/tomee/tomcat-users.xml \
 	&& rm -rf apache-tomee-plus-7.0.5 \
 	&& rm bin/*.bat \
