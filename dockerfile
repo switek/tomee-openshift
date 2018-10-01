@@ -36,7 +36,9 @@ RUN set -x \
 	&& mv apache-tomee-plus-7.0.5/* /usr/local/tomee \
 	&& rm -Rf apache-tomee-plus-7.0.5 \
 	&& rm bin/*.bat \
-	&& rm tomee.tar.gz*
+	&& rm tomee.tar.gz* \
+	&& cp -f xml/tomcat-users.xml /usr/local/tomee/conf \
+	&& rm -rf xml
 
 
 EXPOSE 8080
