@@ -14,7 +14,7 @@ RUN set -x \
 	&& mv apache-tomee-plus-7.0.5/* /usr/local/tomee \
 	&& rm -rf apache-tomee-plus-7.0.5 \
 	&& rm bin/*.bat \
-	&& rm tomee.tar.gz* \	
+	&& rm tomee.tar.gz*
 	
 EXPOSE 8080
 CMD ["catalina.sh", "run"]
